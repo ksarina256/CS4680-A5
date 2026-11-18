@@ -1,0 +1,60 @@
+{
+  "company": "Launchpad Studio",
+  "tasks": 4,
+  "tasks_done": 4,
+  "total_revisions": 3,
+  "review_events": 6,
+  "tools_used": [
+    "claude",
+    "codex"
+  ],
+  "roles_used": [
+    "copywriter",
+    "developer",
+    "researcher",
+    "reviewer"
+  ],
+  "wall_minutes": 0.02,
+  "per_task": [
+    {
+      "id": "T01",
+      "title": "Audience & competitor research",
+      "role": "researcher",
+      "tool": "codex",
+      "status": "done",
+      "revisions": 1,
+      "scores": "6,9",
+      "minutes_to_done": 0.0
+    },
+    {
+      "id": "T02",
+      "title": "Launch copy pack",
+      "role": "copywriter",
+      "tool": "claude",
+      "status": "done",
+      "revisions": 1,
+      "scores": "6,9",
+      "minutes_to_done": 0.02
+    },
+    {
+      "id": "T03",
+      "title": "Landing page",
+      "role": "developer",
+      "tool": "codex",
+      "status": "done",
+      "revisions": 1,
+      "scores": "6,9",
+      "minutes_to_done": 0.02
+    },
+    {
+      "id": "T04",
+      "title": "Final QA cross-check",
+      "role": "reviewer",
+      "tool": "claude",
+      "status": "done",
+      "revisions": 0,
+      "scores": "",
+      "minutes_to_done": 0.02
+    }
+  ]
+}

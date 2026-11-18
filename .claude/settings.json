@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 company.py:*)",
+      "Read",
+      "Edit(workspace/**)",
+      "Write(workspace/**)",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "defaultMode": "acceptEdits"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run unit tests",
+      "type": "shell",
+      "command": "python3 -m unittest discover -s tests -v",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run offline simulation",
+      "type": "shell",
+      "command": "python3 simulate.py",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Preview Herdr launch",
+      "type": "shell",
+      "command": "python3 launch.py --dry-run",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}

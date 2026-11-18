@@ -1,0 +1,50 @@
+{
+  "company": "Launchpad Studio",
+  "workspace_label": "one-person-company",
+  "tools": {
+    "claude": { "command": "claude --permission-mode acceptEdits" },
+    "codex":  { "command": "codex --search --sandbox workspace-write --approve-for-me --skip-git-repo-check" }
+  },
+  "roles": {
+    "coordinator": {
+      "title": "Product Manager",
+      "kind": "coordinator",
+      "tool": "claude",
+      "instructions": "agents/coordinator.md"
+    },
+    "researcher": {
+      "title": "Market Researcher",
+      "kind": "producer",
+      "tool": "codex",
+      "instructions": "agents/researcher.md",
+      "ext": "md"
+    },
+    "copywriter": {
+      "title": "Copywriter",
+      "kind": "producer",
+      "tool": "claude",
+      "instructions": "agents/copywriter.md",
+      "ext": "md"
+    },
+    "developer": {
+      "title": "Web Developer",
+      "kind": "producer",
+      "tool": "codex",
+      "instructions": "agents/developer.md",
+      "ext": "html"
+    },
+    "reviewer": {
+      "title": "QA Editor",
+      "kind": "reviewer",
+      "tool": "claude",
+      "instructions": "agents/reviewer.md",
+      "ext": "md"
+    }
+  },
+  "policy": {
+    "dependency_gate": "approved",
+    "min_revisions": 1,
+    "max_revisions": 2,
+    "min_output_bytes": 200
+  }
+}
