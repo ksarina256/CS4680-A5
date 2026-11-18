@@ -190,7 +190,7 @@ class Launch(unittest.TestCase):
         runs = [c for c in L.calls if c[1:3] == ["pane", "run"]]
         self.assertEqual(len(runs), len(roles) + 1)                     # every agent + the board
         cmds = " ".join(c[4] for c in runs)
-        self.assertIn("claude", cmds)
+        self.assertIn("agy", cmds)
         self.assertIn("codex", cmds)                                    # >= 2 different AI tools
         for role in roles:
             self.assertIn(f"COMPANY_ROLE={role}", cmds)

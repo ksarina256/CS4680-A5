@@ -1,0 +1,32 @@
+{"ts": "2026-11-18T00:24:37-08:00", "event": "request_saved", "task": null, "role": "coordinator", "chars": 42}
+{"ts": "2026-11-18T00:24:37-08:00", "event": "created", "task": "T01", "role": "coordinator", "assignee": "researcher", "title": "Audience & competitor research", "depends_on": []}
+{"ts": "2026-11-18T00:24:37-08:00", "event": "created", "task": "T02", "role": "coordinator", "assignee": "copywriter", "title": "Launch copy pack", "depends_on": ["T01"]}
+{"ts": "2026-11-18T00:24:37-08:00", "event": "created", "task": "T03", "role": "coordinator", "assignee": "developer", "title": "Landing page", "depends_on": ["T01", "T02"]}
+{"ts": "2026-11-18T00:24:37-08:00", "event": "created", "task": "T04", "role": "coordinator", "assignee": "reviewer", "title": "Final QA cross-check", "depends_on": ["T01", "T02", "T03"]}
+{"ts": "2026-11-18T00:24:37-08:00", "event": "picked_up", "task": "T01", "role": "researcher", "from_status": "todo", "to_status": "in_progress", "note": "picked up (WORK)"}
+{"ts": "2026-11-18T00:24:37-08:00", "event": "submitted", "task": "T01", "role": "researcher", "from_status": "in_progress", "to_status": "in_review", "note": "simulated work"}
+{"ts": "2026-11-18T00:24:37-08:00", "event": "review_started", "task": "T01", "role": "reviewer", "from_status": "in_review", "to_status": "under_review", "note": "picked up for review"}
+{"ts": "2026-11-18T00:24:37-08:00", "event": "revision_requested", "task": "T01", "role": "reviewer", "from_status": "under_review", "to_status": "changes_requested", "note": "sent back (round 1, score 6)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "picked_up", "task": "T01", "role": "researcher", "from_status": "changes_requested", "to_status": "in_progress", "note": "picked up (REWORK)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "submitted", "task": "T01", "role": "researcher", "from_status": "in_progress", "to_status": "in_review", "note": "simulated rework"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "review_started", "task": "T01", "role": "reviewer", "from_status": "in_review", "to_status": "under_review", "note": "picked up for review"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "approved", "task": "T01", "role": "reviewer", "from_status": "under_review", "to_status": "done", "note": "approved (round 2, score 9)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "picked_up", "task": "T02", "role": "copywriter", "from_status": "todo", "to_status": "in_progress", "note": "picked up (WORK)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "submitted", "task": "T02", "role": "copywriter", "from_status": "in_progress", "to_status": "in_review", "note": "simulated work"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "review_started", "task": "T02", "role": "reviewer", "from_status": "in_review", "to_status": "under_review", "note": "picked up for review"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "revision_requested", "task": "T02", "role": "reviewer", "from_status": "under_review", "to_status": "changes_requested", "note": "sent back (round 1, score 6)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "picked_up", "task": "T02", "role": "copywriter", "from_status": "changes_requested", "to_status": "in_progress", "note": "picked up (REWORK)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "submitted", "task": "T02", "role": "copywriter", "from_status": "in_progress", "to_status": "in_review", "note": "simulated rework"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "review_started", "task": "T02", "role": "reviewer", "from_status": "in_review", "to_status": "under_review", "note": "picked up for review"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "approved", "task": "T02", "role": "reviewer", "from_status": "under_review", "to_status": "done", "note": "approved (round 2, score 9)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "picked_up", "task": "T03", "role": "developer", "from_status": "todo", "to_status": "in_progress", "note": "picked up (WORK)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "submitted", "task": "T03", "role": "developer", "from_status": "in_progress", "to_status": "in_review", "note": "simulated work"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "review_started", "task": "T03", "role": "reviewer", "from_status": "in_review", "to_status": "under_review", "note": "picked up for review"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "revision_requested", "task": "T03", "role": "reviewer", "from_status": "under_review", "to_status": "changes_requested", "note": "sent back (round 1, score 6)"}
+{"ts": "2026-11-18T00:24:38-08:00", "event": "picked_up", "task": "T03", "role": "developer", "from_status": "changes_requested", "to_status": "in_progress", "note": "picked up (REWORK)"}
+{"ts": "2026-11-18T00:24:39-08:00", "event": "submitted", "task": "T03", "role": "developer", "from_status": "in_progress", "to_status": "in_review", "note": "simulated rework"}
+{"ts": "2026-11-18T00:24:39-08:00", "event": "review_started", "task": "T03", "role": "reviewer", "from_status": "in_review", "to_status": "under_review", "note": "picked up for review"}
+{"ts": "2026-11-18T00:24:39-08:00", "event": "approved", "task": "T03", "role": "reviewer", "from_status": "under_review", "to_status": "done", "note": "approved (round 2, score 9)"}
+{"ts": "2026-11-18T00:24:39-08:00", "event": "picked_up", "task": "T04", "role": "reviewer", "from_status": "todo", "to_status": "in_progress", "note": "picked up (QA)"}
+{"ts": "2026-11-18T00:24:39-08:00", "event": "completed", "task": "T04", "role": "reviewer", "from_status": "in_progress", "to_status": "done", "note": "simulated qa"}
+{"ts": "2026-11-18T00:24:40-08:00", "event": "packaged", "task": null, "role": "coordinator", "files": ["T03_developer.html", "T04_reviewer.md", "T01_researcher.md", "MANIFEST.md", "stats.json", "T02_copywriter.md", "reviews"]}

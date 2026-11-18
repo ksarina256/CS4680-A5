@@ -9,12 +9,12 @@ separate submission requirement; this file covers the implementation evidence th
 |---|---|---|
 | At least four roles, each with job, inputs, outputs, and quality bar | `agents/coordinator.md`, `agents/researcher.md`, `agents/copywriter.md`, `agents/developer.md`, `agents/reviewer.md` | Open the role cards and point to the required sections. |
 | One coordinator is the only agent the boss talks to | `agents/_protocol.md`, `agents/coordinator.md`, and `launch.py` boot prompts | Paste the request only into the coordinator pane. |
-| Herdr, one terminal per agent, one workspace, two AI tools | `launch.py` creates one Herdr workspace, five agent panes, and one board pane; `team.json` assigns Claude and Codex | Run `python3 launch.py --dry-run`, then show the live six-pane workspace. |
+| Herdr, one terminal per agent, one workspace, two AI tools | `launch.py` creates one Herdr workspace, five agent panes, and one board pane; `team.json` assigns Antigravity and Codex | Run `python3 launch.py --dry-run`, then show the live six-pane workspace. |
 | Coordinator creates a task file per role | `company.py new-task`, `workspace/tasks/Txx_<role>.md`, and the coordinator card | Show task files and their dependency graph on the board. |
 | Agents hand off through files and finish tasks | `opc/engine.py` status machine, `workspace/outputs/`, and `company.py submit` | Show an output path in an assignment and a task moving to review/done. |
 | No hand-copying between agents | `opc/engine.py format_assignment()` passes upstream file paths; no agent-to-agent chat API exists | Point out that downstream agents receive paths, not pasted content. |
 | Reviewer checks work and sends it back at least once | `team.json` review policy (`min_revisions: 1`), `workspace/reviews/*_round1.md`, and `company.py review` | Show a round-1 `REVISE`, rework, and later approval. |
-| Same request given to one AI as a baseline | `baseline/run_baseline.py`, `baseline/output/PROMPT_USED.md`, and the response saved after the one-prompt run | Show that the prompt contains the original request plus one instruction paragraph. |
+| Same request given to one AI as a baseline | `baseline/run_baseline.py` and `baseline/output/PROMPT_USED.md`; run the command after signing in to Antigravity to create `baseline_response.md` | Show that the prompt contains the original request plus one instruction paragraph, then show the saved one-response file. |
 | Compare and explain team vs. baseline | `compare/compare.py` and `compare/COMPARISON.md` | Show the measured table and the better/worse analysis. |
 
 ## Prompt-engineering evidence
@@ -40,5 +40,5 @@ python3 simulate.py
 python3 launch.py --dry-run
 ```
 
-The simulation is an offline proof of the workflow; the checked-in `runs/offline-validation/` archive preserves its
+The simulation is an offline proof of the workflow; the checked-in `runs/offline-validation-antigravity/` archive preserves its
 task graph, outputs, review rounds, event log, and final package. A live Herdr run is still required for the assignment demonstration.

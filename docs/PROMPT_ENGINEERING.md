@@ -15,5 +15,5 @@
 | 11 | **Tool-use / ReAct-style loop** | `agents/_protocol.md` work loop (`wait` → act → `submit`) | Agents act through a small, safe CLI; every action has observable feedback (`ERROR:` messages explain policy). |
 | 12 | **Deterministic verification tools** | `python3 company.py lint-html` (developer + reviewer) | Replaces opinion with a machine check for objective requirements (a11y, no external assets, tagline present). |
 | 13 | **Structured, delimited formats** | Task files with front-matter + headed sections; review template; fenced output templates | Reduces parsing ambiguity for both agents and scripts. |
-| 14 | **Heterogeneous models** | `team.json`: Claude Code *and* Codex across roles | Different model families have different blind spots; mixing reduces correlated errors. |
+| 14 | **Heterogeneous models** | `team.json`: Antigravity *and* Codex across roles | Different model families have different blind spots; mixing reduces correlated errors. |
 | 15 | **Controlled baseline (ablation)** | `baseline/run_baseline.py` — same request, one prompt | Isolates what the team structure (not just the model) adds. |

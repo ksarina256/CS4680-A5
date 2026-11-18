@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Baseline: give the SAME request to ONE AI in ONE prompt (no roles, no tasks, no review loop).
 
-    python3 baseline/run_baseline.py --tool claude     # uses `claude -p`
+    python3 baseline/run_baseline.py --tool agy        # uses `agy -p`
     python3 baseline/run_baseline.py --tool codex      # uses `codex exec`
     python3 baseline/run_baseline.py --tool manual     # prints the prompt; paste it into any chat UI yourself,
                                                        # then save the reply to baseline/output/baseline_response.md and run with --extract
@@ -28,7 +28,8 @@ You get exactly one reply, so put the entire launch package in it, in this order
 (4) a QA report. Do not ask questions."""
 
 TOOLS = {
-    "claude": ["claude", "-p"],
+    # Put -p last because it consumes the next argument as the prompt.
+    "agy": ["agy", "--sandbox", "-p"],
     # Keep the baseline runnable from a downloaded folder that has not been git-initialized yet.
     "codex": ["codex", "exec", "--ephemeral", "--skip-git-repo-check", "--sandbox", "read-only"],
 }
@@ -45,7 +46,7 @@ def extract_html(text: str) -> str | None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--tool", choices=[*TOOLS, "manual"], default="claude")
+    ap.add_argument("--tool", choices=[*TOOLS, "manual"], default="agy")
     ap.add_argument("--extract", action="store_true",
                     help="skip running anything; just extract the HTML from an existing baseline_response.md")
     ap.add_argument("--timeout", type=int, default=900)

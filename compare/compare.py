@@ -2,7 +2,7 @@
 """Compare the multi-agent team's package with the single-prompt baseline and write compare/COMPARISON.md.
 
     python3 compare/compare.py                          # metrics + lint only (no AI needed)
-    python3 compare/compare.py --judge claude           # + blind A/B scoring by an AI judge (`claude -p`)
+    python3 compare/compare.py --judge agy              # + blind A/B scoring by an AI judge (`agy --sandbox -p`)
     python3 compare/compare.py --team runs/run1/final   # compare an archived run
 
 What is measured (all deterministic, so you can defend them in the demo):
@@ -29,7 +29,8 @@ sys.path.insert(0, str(REPO))
 from opc import lint  # noqa: E402
 
 JUDGE_CMD = {
-    "claude": ["claude", "-p"],
+    # Put -p last because it consumes the next argument as the prompt.
+    "agy": ["agy", "--sandbox", "-p"],
     "codex": ["codex", "exec", "--ephemeral", "--skip-git-repo-check", "--sandbox", "read-only"],
 }
 RUBRIC = ["accuracy", "completeness", "consistency", "clarity", "craft"]
@@ -218,7 +219,7 @@ def main() -> int:
         print(f"No team deliverables in {args.team}. Run the company first (or `python3 simulate.py`).", file=sys.stderr)
         return 1
     if not base:
-        print("No baseline yet. Run: python3 baseline/run_baseline.py --tool claude   (or --tool manual)", file=sys.stderr)
+        print("No baseline yet. Run: python3 baseline/run_baseline.py --tool agy   (or --tool manual)", file=sys.stderr)
         return 1
     tm, bm = metrics(team), metrics(base)
     j = judge(team, base, args.judge) if args.judge else None

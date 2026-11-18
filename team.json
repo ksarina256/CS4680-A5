@@ -2,14 +2,14 @@
   "company": "Launchpad Studio",
   "workspace_label": "one-person-company",
   "tools": {
-    "claude": { "command": "claude --permission-mode acceptEdits" },
-    "codex":  { "command": "codex --search --sandbox workspace-write --approve-for-me --skip-git-repo-check" }
+    "antigravity": { "command": "agy --sandbox --mode auto --dangerously-skip-permissions -i" },
+    "codex":       { "command": "codex --search --sandbox workspace-write --approve-for-me --skip-git-repo-check" }
   },
   "roles": {
     "coordinator": {
       "title": "Product Manager",
       "kind": "coordinator",
-      "tool": "claude",
+      "tool": "antigravity",
       "instructions": "agents/coordinator.md"
     },
     "researcher": {
@@ -22,7 +22,7 @@
     "copywriter": {
       "title": "Copywriter",
       "kind": "producer",
-      "tool": "claude",
+      "tool": "antigravity",
       "instructions": "agents/copywriter.md",
       "ext": "md"
     },
@@ -36,7 +36,7 @@
     "reviewer": {
       "title": "QA Editor",
       "kind": "reviewer",
-      "tool": "claude",
+      "tool": "antigravity",
       "instructions": "agents/reviewer.md",
       "ext": "md"
     }

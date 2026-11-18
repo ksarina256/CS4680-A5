@@ -5,7 +5,7 @@
   "total_revisions": 3,
   "review_events": 6,
   "tools_used": [
-    "claude",
+    "antigravity",
     "codex"
   ],
   "roles_used": [
@@ -14,7 +14,7 @@
     "researcher",
     "reviewer"
   ],
-  "wall_minutes": 0.02,
+  "wall_minutes": 0.03,
   "per_task": [
     {
       "id": "T01",
@@ -24,13 +24,13 @@
       "status": "done",
       "revisions": 1,
       "scores": "6,9",
-      "minutes_to_done": 0.0
+      "minutes_to_done": 0.02
     },
     {
       "id": "T02",
       "title": "Launch copy pack",
       "role": "copywriter",
-      "tool": "claude",
+      "tool": "antigravity",
       "status": "done",
       "revisions": 1,
       "scores": "6,9",
@@ -44,17 +44,17 @@
       "status": "done",
       "revisions": 1,
       "scores": "6,9",
-      "minutes_to_done": 0.02
+      "minutes_to_done": 0.03
     },
     {
       "id": "T04",
       "title": "Final QA cross-check",
       "role": "reviewer",
-      "tool": "claude",
+      "tool": "antigravity",
       "status": "done",
       "revisions": 0,
       "scores": "",
-      "minutes_to_done": 0.02
+      "minutes_to_done": 0.03
     }
   ]
 }

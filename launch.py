@@ -8,16 +8,16 @@
 Layout (each box is a real terminal pane running an AI CLI or the board):
 
     +-----------------+-----------------+
-    | coordinator     | researcher      |   claude  | codex
+    | coordinator     | researcher      | antigravity | codex
     | (you talk here) +-----------------+
-    +-----------------+ copywriter      |   claude
+    +-----------------+ copywriter      | antigravity
     | reviewer        +-----------------+
     +-----------------+ developer       |   codex
     | task board      |                 |
     +-----------------+-----------------+
 
-Roles, tools and instruction files all come from team.json, so swapping an agent from
-Claude Code to Codex (or back) is a one-word change.
+Roles, tools and instruction files all come from team.json, so swapping an agent between
+Antigravity and Codex is a one-word change.
 """
 from __future__ import annotations
 

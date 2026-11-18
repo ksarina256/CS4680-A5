@@ -5,7 +5,7 @@ so consider recording the real run and speeding up the waiting parts (say so on 
 
 | Time | On screen | Say (≈) |
 |---|---|---|
-| 0:00–0:10 | Terminal: `python3 launch.py` → Herdr workspace appears with 6 panes | "I'm the boss of Launchpad Studio — a one-person company. Five AI agents, each in its own Herdr pane: PM and copywriter and editor on Claude Code, researcher and developer on Codex." |
+| 0:00–0:10 | Terminal: `python3 launch.py` → Herdr workspace appears with 6 panes | "I'm the boss of Launchpad Studio — a one-person company. Five AI agents, each in its own Herdr pane: PM, copywriter, and editor on Antigravity, researcher and developer on Codex." |
 | 0:10–0:20 | Paste `demo_request.md` into the **coordinator** pane | "I only ever talk to the coordinator." |
 | 0:20–0:35 | Coordinator writes `plan.md`, creates T01–T04; board pane fills with tasks and dependencies | "It plans, then writes a task file per role. Agents pick tasks up on their own — no copy-paste between them." |
 | 0:35–0:55 | Researcher works → submit → reviewer pane lights up → **revision requested** (show review file with numbered fixes) | "The QA editor reviews every deliverable. Here it sent the research back with specific fixes; the researcher reworks it." |
